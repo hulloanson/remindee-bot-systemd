@@ -1,0 +1,27 @@
+[Unit]
+Description=Remindee Telegram Bot
+
+[Service]
+ExecStart=@REMINDEE_PATH@
+Restart=always
+RestartSec=2
+User=remindee
+Environment=REMINDEE_DB=@REMINDEE_DATA_DIR@/remindee_db.sqlite
+EnvironmentFile=@REMINDEE_DATA_DIR@/token.env
+
+ProtectHome=true
+ProtectSystem=full
+PrivateTmp=true
+#ProtectKernelTunables=true
+ProtectControlGroups=true
+ReadWritePaths=@REMINDEE_DATA_DIR@
+
+# Execute Mappings
+MemoryDenyWriteExecute=true
+
+# Privilege escalation
+NoNewPrivileges=true
+
+[Install]
+WantedBy=default.target
+

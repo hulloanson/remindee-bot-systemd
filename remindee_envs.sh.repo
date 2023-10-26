@@ -1,0 +1,4 @@
+export REMINDEE_DIR=/opt/remindee
+export REMINDEE_PATH=/opt/remindee/bin/remindee-bot
+export REMINDEE_DATA_DIR=/var/lib/remindee
+export REMINDEE_BOT_TOKEN='replace with your own token'
